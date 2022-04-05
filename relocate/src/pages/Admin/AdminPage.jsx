@@ -1,4 +1,4 @@
-const MainPage = () => {
+const AdminLoginPage = () => {
     return (
         <div>
             <h1>Admin</h1>
@@ -6,4 +6,4 @@ const MainPage = () => {
     )
 }
 
-export default MainPage
+export default AdminLoginPage

@@ -1,8 +1,10 @@
 @import "../node_modules/normalize-scss/sass/normalize";
+@import "./assets/fonts/style.scss";
 @import "./variables";
 
 .app {
   background-color: white;
   height: 100%;
+  font-family: "SF Pro Display Regular", sans-serif;
 }
 
