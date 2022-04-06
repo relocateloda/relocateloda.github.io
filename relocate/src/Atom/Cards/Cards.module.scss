@@ -6,9 +6,11 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
 }
 
 .cardOne {
+  text-decoration: none;
   // max-width: 300px;
   // height: 400px;
   max-width: 202px;
@@ -48,6 +50,7 @@
 }
 
 .cardSecond {
+  text-decoration: none;
   max-width: 202px;
   height: 269px;
   cursor: pointer;
