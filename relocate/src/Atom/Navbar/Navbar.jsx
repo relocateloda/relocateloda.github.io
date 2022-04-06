@@ -5,9 +5,9 @@ import logo from "../../assets/logo.png"
 const Navbar = () => {
   return (
     <div className={styles.navbar}>
-      <p>Львівська Обласна</p> 
+      <p className={styles.title}>Львівська Обласна</p> 
       <img className={styles.logo} src={logo} />
-      <p>Державна Aдмінісрація</p>
+      <p className={styles.title}>Державна Адміністрація</p>
     </div>
   );
 };

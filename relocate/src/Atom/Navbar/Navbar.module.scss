@@ -1,35 +1,19 @@
 @import "../../variables.scss";
 
 
-
 .logo{
-    width: 50px;
-    text-align: center;
+    display: block;
+    width: 70px;
 }
 
 .navbar{
-    padding:10px ;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media only screen and (min-width: $s) {
-        padding: 0;
-    }
-
+  display: flex;
+  align-items: center;
 }
-
-p{
-    color:$color-white;
+.title{
     text-align: center;
-    padding: 10px;
-    font-size: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
     font-family: $sf-bold;
-    @media only screen and (min-width: $s) {
-        align-items: center;
-    }
-    @media only screen and (min-width: $sm) {
-        font-size: 25px;
-    }
+    color: $color-white;
 }
