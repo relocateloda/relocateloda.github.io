@@ -2,10 +2,11 @@ import "./App.scss";
 import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
 import MainPage from "./pages/Main/Mainpage";
 import { RoutesConst } from "./common/Routes";
-import SendOffer from "./pages/SendOffer/OffersCategories";
-import OffersCategories from "./pages/OffersCategories/SendOffer";
-import NotFoundPage from "./pages/NotFoundPage/OffersCategories";
+
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import AdminLoginPage from "./pages/Admin/AdminPage";
+import SendOffer from "./pages/SendOffer/SendOffer";
+import OffersCategories from "./pages/OffersCategories/OffersCategories";
 
 
 const App = () => {
