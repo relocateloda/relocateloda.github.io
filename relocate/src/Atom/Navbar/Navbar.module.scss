@@ -9,11 +9,15 @@
 .navbar{
   display: flex;
   align-items: center;
+
 }
 .title{
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     text-transform: uppercase;
     font-family: $sf-bold;
     color: $color-white;
+    @media only screen and (min-width: $sm) {
+        font-size: 20px;
+      }
 }
