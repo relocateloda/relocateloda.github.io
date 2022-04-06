@@ -4,7 +4,7 @@ const AboutRelocation = () => {
   return (
     <div className={styles.wrapper}>
       <h2 className={styles.title}>Про Релокацію</h2>
-      <p>
+      <p className={styles.text}>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
@@ -15,7 +15,7 @@ const AboutRelocation = () => {
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </p>
-      <p>
+      <p className={styles.text}>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
