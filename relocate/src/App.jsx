@@ -17,8 +17,14 @@ const App = () => {
           <Route path={RoutesConst.MAIN} element={<MainPage />} />
           <Route path={RoutesConst.ADMIN} element={<AdminLoginPage />} />
           <Route path={RoutesConst.SEND_OFFER} element={<SendOffer />} />
-          <Route path={RoutesConst.OFFERS} element={<OffersCategories />} />
+          <Route path={RoutesConst.CATEGORIES} element={<OffersCategories />} />
+          <Route path={RoutesConst.CONSULTING} element={<OffersCategories />} />
+          <Route path={RoutesConst.IT} element={<OffersCategories />} />
+          <Route path={RoutesConst.LOGISTICS} element={<OffersCategories />} />
+          <Route path={RoutesConst.MANUFACTURING} element={<OffersCategories />} />
+          <Route path={RoutesConst.OTHER} element={<OffersCategories />} />
           <Route path={RoutesConst.NOT_FOND} element={<NotFoundPage />} />
+
           <Route
               path="*"
               element={<Navigate to={RoutesConst.NOT_FOND} replace />}

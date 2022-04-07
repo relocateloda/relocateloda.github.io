@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const OffersCards = ({categorie}) => {
         return (
-          <Link className={`${styles[`card${categorie.position}`]} ${styles.card}`} to={`/${categorie.value}`}>
+          <Link className={`${styles[`card${categorie.position}`]} ${styles.card}`} to={`/${categorie?.value}`}>
               <img className={styles.lampicon} src={lampIcon}></img>
             <h2 className={styles.title}>
                 {categorie.name}
