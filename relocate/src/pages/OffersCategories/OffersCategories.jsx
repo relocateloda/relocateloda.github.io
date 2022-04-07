@@ -7,7 +7,7 @@ import OffersCards from "../../Atom/OfferCards/OfferCards";
 
 
 const OffersCategories= () => {
-    const [categories, setCategories] = useState([]);
+    const [categories, setCategories] = useState(null);
     const q = query(collection(db, "categories"), orderBy("position", "asc"));
     useEffect(
         () =>
@@ -22,12 +22,7 @@ const OffersCategories= () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <OffersCards />
-        <OffersCards />
-        <OffersCards />
-        <OffersCards />
-        <OffersCards />
-        <OffersCards />
+          { categories && categories.map(cat => <OffersCards categorie={cat} />)}
       </div>
     </div>
   );
