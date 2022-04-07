@@ -3,9 +3,12 @@ import logo from "../../assets/logo.png"
 
 
 const Navbar = () => {
-  return(
-     <h1 className={styles.title}>Львівська Обласна <img className={styles.logo} src={logo} /> Державна Aдмінісрація</h1>
-  )
+  return (
+    <div className={styles.navbar}>
+            <img className={styles.logo} src={logo} />
+      <p className={styles.title}>Львівська Обласна Державна Адміністрація</p> 
+    </div>
+  );
 };
 
 

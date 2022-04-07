@@ -3,8 +3,9 @@
 @import "./variables";
 
 .app {
-  background-color: white;
+  background-color: $color-white;
   height: 100%;
   font-family: "SF Pro Display Regular", sans-serif;
+  overflow-x: hidden;
 }
 
