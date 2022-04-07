@@ -1,11 +1,23 @@
 @import "../../variables.scss";
 
 
-.title{
-    color:white;
-    text-align: center;
-}
 .logo{
-    width: 100px;
+    display: block;
+    width: 70px;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+
+}
+.title{
     text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: $sf-bold;
+    color: $color-white;
+    @media only screen and (min-width: $sm) {
+        font-size: 20px;
+      }
 }
