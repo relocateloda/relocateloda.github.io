@@ -4,10 +4,10 @@ import db from "../../firebase-config";
 
 const OffersCategories = () => {
   const [categories, setCategories] = useState([]);
-  const q = query(collection(db, "it_confirmed"), orderBy("position", "asc"));
+  const q = query(collection(db, "categories"), orderBy("position", "asc"));
   useEffect(
     () =>
-      onSnapshot(collection(db, "it_confirmed"), (snapshot) => {
+      onSnapshot(q, (snapshot) => {
         setCategories(
           snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
         );
