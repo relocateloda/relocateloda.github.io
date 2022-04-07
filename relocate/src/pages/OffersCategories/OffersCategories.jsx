@@ -1,12 +1,15 @@
 import styles from "./OffersCategories.module.scss";
 
 
-const MainPage = () => {
+import OffersCards from "../../Atom/OfferCards/OfferCards";
+
+
+const OffersCategories= () => {
   return (
-    <div className={styles.container}>
-     
+    <div className={styles.container}>'
+    <OffersCards/>
     </div>
   );
 };
 
-export default MainPage;
+export default OffersCategories;
