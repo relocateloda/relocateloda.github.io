@@ -1,0 +1,30 @@
+@import "../../variables.scss";
+
+.container {
+  padding: 10px 10px;
+  min-height: 100%;
+  background-image: linear-gradient(
+      rgba(38, 39, 38, 0.158),
+      rgba(105, 144, 189, 0.829)
+    ),
+    url("../../assets/lviv.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // display: flex;
+  // flex-direction: row;
+  //  align-content: flex-start;
+  // align-items: flex-start;
+  // flex-wrap: wrap;
+
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+   align-items: flex-start;
+   justify-content: center;
+   flex-wrap: wrap;
+   
+}
