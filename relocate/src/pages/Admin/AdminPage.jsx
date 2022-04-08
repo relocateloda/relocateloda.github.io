@@ -1,7 +1,7 @@
 const AdminLoginPage = () => {
     return (
         <div>
-            <h1>Admin</h1>
+            <h1>Login form for admin here</h1>
         </div>
     )
 }

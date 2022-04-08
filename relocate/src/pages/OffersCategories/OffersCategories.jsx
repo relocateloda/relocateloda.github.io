@@ -1,9 +1,10 @@
 import styles from "./OffersCategories.module.scss";
 import { useEffect, useState } from "react";
 import { onSnapshot, collection, orderBy, query } from "firebase/firestore";
-import db from "../../firebase-config";
+
 
 import OffersCards from "../../Atom/OfferCards/OfferCards";
+import { db } from "../../firebase-config";
 
 
 const OffersCategories= () => {
