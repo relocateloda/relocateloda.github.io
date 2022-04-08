@@ -19,7 +19,6 @@ const OffersCategories= () => {
             }),
         []
     );
-    console.log(categories);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
