@@ -1,16 +1,17 @@
 @import "../../variables.scss";
 
-
 .logo{
     display: block;
     width: 70px;
+    margin-right: 10px;
 }
 
-.navbar{
-  width: 100%;
+.footer{
+  width: 99%;
+  margin-top: 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;;
 }
 .title{
     text-align: center;
@@ -22,5 +23,3 @@
         font-size: 20px;
       }
 }
-
-

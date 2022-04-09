@@ -3,6 +3,7 @@ import styles from "./OfferCards.module.scss";
 
 import lampIcon from "../../assets/icon/lamp.png";
 import arrowWhite from "../../assets/icon/arrowWhite.png";
+
 import { Link } from "react-router-dom";
 
 
