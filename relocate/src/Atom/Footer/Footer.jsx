@@ -4,7 +4,7 @@ import emblem from "../../assets/Emblem.png"
 
 
 
-const Fotter = () => {
+const Footer = () => {
   return (
     <div className={styles.footer}>
             <img className={styles.logo} src={emblem} />
@@ -14,4 +14,4 @@ const Fotter = () => {
 };
 
 
-export default  Fotter;
+export default  Footer;
