@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Cards = () => {
     return (
         <div className={styles.wrapper}>
-        <Link to={RoutesConst.OFFERS}className={styles.cardOne}>
+        <Link to={RoutesConst.CATEGORIES}className={styles.cardOne}>
           <img className={styles.icon} src={relocation} alt="car" />
           <h2 className={styles.title}>Ви релокований бізнес?</h2>
           <div className={styles.subtitle}>
