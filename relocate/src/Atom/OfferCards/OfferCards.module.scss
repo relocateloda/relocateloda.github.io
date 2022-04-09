@@ -11,21 +11,32 @@
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
   cursor: pointer;
+  text-decoration: none;
+
+  font-family: $sf-bold;
 }
 .card:hover {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
   transform: scale(1.01);
+  .link:after {
+    width: 100%;
+  }
+  .arrowWhite {
+    margin-left: 10px;
+  }
 }
 .link {
   position: relative;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
 }
 .lampicon {
   width: 50px;
 }
 .arrowWhite {
   width: 40px;
+  transition: all 0.5s;
 }
 .link {
   position: relative;
@@ -42,9 +53,7 @@
   background-color: rgba(255, 255, 255, 0.6);
   transition: all 0.5s;
 }
-.link:hover::after {
-  width: 100%;
-}
+
 .exit {
   grid-row: 1/2;
   justify-self: end;
