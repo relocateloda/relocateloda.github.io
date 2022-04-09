@@ -15,9 +15,9 @@ const OffersCards = ({categorie}) => {
                 {categorie.name}
             </h2>
             <p className={styles.apply}>
-              {/*<a className={styles.link} href="#">*/}
-              {/*  Детальніше*/}
-              {/*</a>*/}
+              <a className={styles.link} href="#">
+               Детальніше
+              </a>
               <img className={styles.arrowWhite} src={arrowWhite} />
             </p>
           </Link>
