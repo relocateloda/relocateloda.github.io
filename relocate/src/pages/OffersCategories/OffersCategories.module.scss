@@ -10,11 +10,10 @@
     url("../../assets/lviv.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  // display: flex;
-  // flex-direction: row;
-  //  align-content: flex-start;
-  // align-items: flex-start;
-  // flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 
 }
 
