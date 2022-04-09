@@ -28,10 +28,10 @@ const App = () => {
           <Route path={RoutesConst.MANUFACTURING} element={<OffersCategories />} />
           <Route path={RoutesConst.OTHER} element={<OffersCategories />} />
           <Route path={RoutesConst.NOT_FOND} element={<NotFoundPage />} />
-          {/*<Route*/}
-          {/*    path="*"*/}
-          {/*    element={<Navigate to={RoutesConst.NOT_FOND} replace />}*/}
-          {/*/>*/}
+          <Route
+              path="*"
+              element={<Navigate to={RoutesConst.NOT_FOND} replace />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

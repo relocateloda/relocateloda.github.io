@@ -22,7 +22,7 @@ const OffersCategories= () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-          { categories && categories.map(cat => <OffersCards categorie={cat} />)}
+          { categories && categories.map(cat => <OffersCards categorie={cat} key={cat.id}/>)}
       </div>
     </div>
   );
