@@ -9,7 +9,7 @@ import SendOffer from "./pages/SendOffer/SendOffer";
 import OffersCategories from "./pages/OffersCategories/OffersCategories";
 import PrivateRoute from "./utils/HOC/PrivateRoute";
 import AdminProposals from "./pages/AdminProposals/AdminProposals";
-import "rsuite/dist/rsuite.min.css";
+
 
 const App = () => {
   return (
