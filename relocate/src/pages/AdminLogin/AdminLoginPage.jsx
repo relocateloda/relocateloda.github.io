@@ -8,7 +8,7 @@ import { login } from "../../utils/apiCalls/firebaseRequests";
 import { encryptStorageAdmin } from "../../utils/encryptStorage";
 import { useNavigate } from "react-router-dom";
 import { RoutesConst } from "../../common/Routes";
-
+import styles from "./AdminLogin.module.scss"
 const model = Schema.Model({
   name: Schema.Types.StringType().isRequired("This field is required."),
   pass: Schema.Types.StringType().isRequired("This field is required."),

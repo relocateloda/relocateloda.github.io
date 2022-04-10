@@ -11,6 +11,7 @@ import PrivateRoute from "./utils/HOC/PrivateRoute";
 import AdminProposals from "./pages/AdminProposals/AdminProposals";
 
 
+
 const App = () => {
   return (
     <div className={styles.app}>
