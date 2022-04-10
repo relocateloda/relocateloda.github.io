@@ -2,6 +2,7 @@ import { encryptStorageAdmin } from "../../utils/encryptStorage";
 import { Button, Form, Input, InputGroup, Schema, } from "rsuite";
 import { TextField, TextFieldPassWord } from "../../Atom/loginForm/LoginForm";
 import { useState } from "react";
+import styles from "./AdminLogin.module.scss"
 
 const model = Schema.Model({
     name: Schema.Types.StringType().isRequired('This field is required.'),
@@ -15,7 +16,7 @@ const AdminLoginPage = () => {
     });
     console.log(formValue);
     return (
-        <div>
+        <div className={styles.container}>
             <h3>Вхід</h3>
             <Form
                 model={model}
@@ -24,7 +25,7 @@ const AdminLoginPage = () => {
             >
                 <TextField name="name" label="Username" />
                 <TextField name="password" label="Password"/>
-                <Button appearance="primary" type="submit">
+                <Button className={styles.submitBtn} appearance="primary" type="submit">
                     Submit
                 </Button>
             </Form>
