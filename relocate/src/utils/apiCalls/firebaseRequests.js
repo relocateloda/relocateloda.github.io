@@ -9,3 +9,15 @@ export const getCategories = (setData) => {
     );
   })
 };
+
+
+export const login = (path, set, setError) => {
+  const q = query(collection(db, path));
+  return onSnapshot(q, (snapshot) => {
+    const doc = snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    doc.length === 0
+        ? setError(true)
+        : set(doc[0].isAdmin);
+    console.log("doc", doc.length);
+  })
+};

@@ -5,7 +5,6 @@ import { RoutesConst } from "../../common/Routes";
 
 const PrivateRoute = () => {
   const user = encryptStorageAdmin.getItem("au");
-  console.log("user", user)
   return  user ? <Outlet /> : <Navigate to={RoutesConst.MAIN} replace />
 };
 

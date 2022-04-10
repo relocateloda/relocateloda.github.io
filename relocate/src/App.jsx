@@ -2,7 +2,7 @@ import styles from "./App.module.scss";
 import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
 import MainPage from "./pages/Main/Mainpage";
 import { RoutesConst } from "./common/Routes";
-
+import "rsuite/dist/rsuite.min.css";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import AdminLoginPage from "./pages/AdminLogin/AdminLoginPage";
 import SendOffer from "./pages/SendOffer/SendOffer";
