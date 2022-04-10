@@ -1,0 +1,18 @@
+@import "../../variables.scss";
+
+
+.container {
+    padding: 10px 10px;
+    min-height: 100%;
+    background-image: linear-gradient(
+        rgba(38, 39, 38, 0.158),
+        rgba(95, 155, 204, 0.829)
+      ),
+      url("../../assets/lviv.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }

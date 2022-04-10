@@ -1,5 +1,9 @@
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase-config";
+import styles from  "./SendOffer.module.scss"
+import Navbar from "../../Atom/Navbar/Navbar";
+import Footer from "../../Atom/Footer/Footer";
+import OfferForm from "../../Atom/OfferForm/OfferForm";
 
 
 const SendOffer = () => {
@@ -18,8 +22,10 @@ const SendOffer = () => {
        // console.log(docRef.id);
    }
     return (
-        <div>
-            <h1 onClick={handleSendNew}>SendOffer Form</h1>
+        <div className={styles.container}>
+            <Navbar />
+            <OfferForm />
+            <Footer />
         </div>
     )
 }
