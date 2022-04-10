@@ -45,7 +45,7 @@ const AdminLoginPage = () => {
   return (
     <div>
       <h3>Вхід</h3>
-      {isError <span></span>}
+      {isError && <p>Невірний користувач си пароль</p>}
       <Form
         model={model}
         formValue={formValue}
