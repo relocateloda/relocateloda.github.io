@@ -1,4 +1,3 @@
-import styles from "./AdminLoginPage.module.scss";
 import { Button, Form, Input, InputGroup, Schema } from "rsuite";
 import { TextField } from "../../Atom/loginForm/LoginForm";
 import { useEffect, useRef, useState } from "react";
@@ -27,6 +26,10 @@ const AdminLoginPage = () => {
   const handleChange = () => {
     setVisible(!visible);
   };
+    useEffect(() => {
+        const user = encryptStorageAdmin.getItem("au");
+        user === true && navigate(RoutesConst.ADMIN_PROPOSALS)
+    }, []);
   useEffect(() => {
     if (isAdmin) {
       encryptStorageAdmin.setItem("au", true);
@@ -50,7 +53,7 @@ const AdminLoginPage = () => {
           <Navbar />
           <div className={styles.wrapper}>
               <h3 className={styles.title}>Вхід</h3>
-      {isError && <p>Невірний користувач си пароль</p>}
+      {isError && <p className={styles.error}>Невірний користувач чи пароль</p>}
       <Form
         model={model}
         formValue={formValue}
