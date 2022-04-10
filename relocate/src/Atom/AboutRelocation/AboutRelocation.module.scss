@@ -14,14 +14,16 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
-
 .title {
-    color: $color-black;
-
+        color: $color-black;
+        font-size: 24px;
+    line-height: 38px;
 }
+
 .text{
     font-size: 20px;
     text-align:start;
+    color: $color-black;
 }
 .link{
     color:blue;

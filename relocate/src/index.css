@@ -3,6 +3,7 @@ html,
 #root {
   min-height: 100% !important;
   height: 100%;
+
 }
 
 /* Указываем box sizing */
@@ -73,3 +74,5 @@ textarea,
 select {
   font: inherit;
 }
+
+
