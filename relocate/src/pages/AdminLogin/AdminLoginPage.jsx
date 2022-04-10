@@ -9,6 +9,9 @@ import { encryptStorageAdmin } from "../../utils/encryptStorage";
 import { useNavigate } from "react-router-dom";
 import { RoutesConst } from "../../common/Routes";
 import styles from "./AdminLogin.module.scss"
+import Navbar from "../../Atom/Navbar/Navbar";
+import Footer from "../../Atom/Footer/Footer";
+
 const model = Schema.Model({
   name: Schema.Types.StringType().isRequired("This field is required."),
   pass: Schema.Types.StringType().isRequired("This field is required."),
@@ -43,8 +46,10 @@ const AdminLoginPage = () => {
     login(`${formValue.name}${formValue.pass}`, setIsAdmin, setIsError);
   };
   return (
-    <div>
-      <h3>Вхід</h3>
+      <div className={styles.container}>
+          <Navbar />
+          <div className={styles.wrapper}>
+              <h3 className={styles.title}>Вхід</h3>
       {isError && <p>Невірний користувач си пароль</p>}
       <Form
         model={model}
@@ -68,7 +73,9 @@ const AdminLoginPage = () => {
           Submit
         </Button>
       </Form>
-    </div>
+          </div>
+          <Footer />
+      </div>
   );
 };
 
