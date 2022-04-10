@@ -1,10 +1,14 @@
+import style from "./SendOffer.module.scss"
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import { forwardRef, useEffect, useRef, useState } from "react";
 import { Button, CheckPicker, Form, Message, Schema, toaster } from "rsuite";
 import { getCategories } from "../../utils/apiCalls/firebaseRequests";
-const { ArrayType, StringType, NumberType } = Schema.Types;
 
+import Navbar from "../../Atom/Navbar/Navbar";
+import Footer from "../../Atom/Footer/Footer";
+
+const { ArrayType, StringType, NumberType } = Schema.Types;
 const model = Schema.Model({
   code: Schema.Types.StringType().isRequired("Обов'язково заповнити"),
   contact_person: Schema.Types.StringType().isRequired("Обов'язково заповнити"),
@@ -98,13 +102,14 @@ const SendOffer = () => {
     // console.log(docRef.id);
   };
   return (
+    <div className={style.container}>
+      <Navbar />
     <Form
       ref={formRef}
       onChange={setFormValue}
       onCheck={setFormError}
       formValue={formValue}
       model={model}
-      style={{ backgroundColor: "black" }}
     >
       <TextField name="name" label="Назва юридичної/фізичної особи" />
       <TextField name="code" label="ЄДРПОУ або ІПН" />
@@ -113,7 +118,7 @@ const SendOffer = () => {
 
       <Field
         name="category"
-        label="Сфера, у якій Ваша компанія може надати пропозиції до співпраці "
+        label="Сфера, у якій Ваша компанія може надати пропозиції до співпраці"
         accepter={CheckPicker}
         error={formError.category}
         style={{ display: "inline-block", width: 200 }}
@@ -170,6 +175,8 @@ const SendOffer = () => {
         </Button>
       </Form.Group>
     </Form>
+    <Footer />
+    </div>
   );
 };
 
