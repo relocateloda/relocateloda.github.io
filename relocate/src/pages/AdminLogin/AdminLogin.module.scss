@@ -5,7 +5,7 @@
   min-height: 100%;
   background-image: linear-gradient(
       rgba(38, 39, 38, 0.158),
-      rgba(105, 189, 182, 0.829)
+      rgba(43, 51, 50, 0.829)
     ),
     url("../../assets/lviv.jpg");
   background-repeat: no-repeat;
@@ -27,6 +27,8 @@
   color: red;
   text-align: center;
   font-family: $sf-bold;
+  text-align: start;
+  font-size: 20px;
 }
 .submitBtn{
     border: 0;
