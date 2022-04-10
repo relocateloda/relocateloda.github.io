@@ -3,6 +3,8 @@ import { Button, Form, Input, InputGroup, Schema, } from "rsuite";
 import { TextField, TextFieldPassWord } from "../../Atom/loginForm/LoginForm";
 import { useState } from "react";
 import styles from "./AdminLogin.module.scss"
+import Navbar from "../../Atom/Navbar/Navbar";
+import Footer from "../../Atom/Footer/Footer";
 
 const model = Schema.Model({
     name: Schema.Types.StringType().isRequired('This field is required.'),
@@ -17,7 +19,9 @@ const AdminLoginPage = () => {
     console.log(formValue);
     return (
         <div className={styles.container}>
-            <h3>Вхід</h3>
+            <Navbar />
+            <div className={styles.wrapper}>
+            <h3 className={styles.title}>Вхід</h3>
             <Form
                 model={model}
                 formValue={formValue}
@@ -29,6 +33,8 @@ const AdminLoginPage = () => {
                     Submit
                 </Button>
             </Form>
+            </div>
+            <Footer />
         </div>
     )
 }

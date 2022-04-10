@@ -12,6 +12,7 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -39,7 +40,18 @@
     transition: background 500ms ease-in-out, color 500ms ease-in-out;
 }
 
-.submitBtn:hover {
-    color: #36a2eb;
-    background-position: 100%;
+
+  .title{
+    color:$color-white;
+  }
+  :global{
+    .rs-form-vertical .rs-form-group .rs-form-control-label {
+      display: block;
+      color:$color-white;
+  }
+  .rs-btn-primary {
+    margin: 0;
+    color: #fff;
+    border: none;
+}
   }
