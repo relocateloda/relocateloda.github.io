@@ -78,7 +78,7 @@ const SendOffer = () => {
   const handleSendNew = async () => {
     const collectionRef = collection(db, `${formValue.category}_proposals`);
     const docRef = await addDoc(collectionRef, formValue);
-    docRef?.id && toaster.push(<Message type="success">Ваша пропозиція вдало надіслано</Message>);
+    docRef?.id && toaster.push(<Message type="success">Ваша пропозиція вдало надіслана</Message>);
     docRef?.id && setTimeout(()=> navigate(RoutesConst.MAIN), 1500)
   };
   return (
