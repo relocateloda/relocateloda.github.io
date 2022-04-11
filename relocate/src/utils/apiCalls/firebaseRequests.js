@@ -18,6 +18,5 @@ export const login = (path, set, setError) => {
     doc.length === 0
         ? setError(true)
         : set(doc[0].isAdmin);
-    console.log("doc", doc.length);
   })
 };
