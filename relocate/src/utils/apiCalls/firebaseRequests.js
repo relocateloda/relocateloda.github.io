@@ -29,3 +29,12 @@ export const getPoposalsByCategory= (category, setData) => {
     );
   })
 };
+
+export const getOffersByCategory= (category, setData) => {
+  const q = query(collection(db, `${category}_confirmed`));
+  return onSnapshot(q, (snapshot) => {
+    setData(
+        snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+    );
+  })
+};

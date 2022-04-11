@@ -5,19 +5,26 @@ import { SelectPicker } from "rsuite";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  getCategories,
+  getCategories, getOffersByCategory,
   getPoposalsByCategory,
 } from "../../utils/apiCalls/firebaseRequests";
 
 const AdminProposals = () => {
-  const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [catategories, setCategories] = useState([]);
+  const [selectedProposalsCategory, setSelectedProposalsCategory] = useState(null);
   const [proposalsList, setProposalsList] = useState(null);
+
+  const [selectedOffersCategory, setSelectedOffersCategory] = useState(null);
+  const [offersList, setOffersList] = useState(null);
 
   useEffect(() => getCategories(setCategories), []);
   useEffect(
-    () => getPoposalsByCategory(selectedCategory, setProposalsList),
-    [selectedCategory]
+    () => getPoposalsByCategory(selectedProposalsCategory, setProposalsList),
+    [selectedProposalsCategory]
+  );
+  useEffect(
+      () => getOffersByCategory(selectedOffersCategory, setOffersList),
+      [selectedOffersCategory]
   );
   console.log("proposalsList", proposalsList);
   return (
@@ -29,48 +36,51 @@ const AdminProposals = () => {
       <div className={styles.flexBox}>
         <div>
           <h3>Редагування погоджених пропозицій</h3>
-            {/*{proposalsList?.length > 0 &&*/}
-            {/*    proposalsList.map((item) => (*/}
-            {/*        <div>*/}
-            {/*            <p>Назва юридичної/фізичної особи - {item.name}</p>*/}
-            {/*            <p>ЄДРПОУ або ІПН - {item.code}</p>*/}
-            {/*            <p>Контактна особа * {item.contact_person}</p>*/}
-            {/*            <p>Контактний телефон {item.phone}</p>*/}
-            {/*            <p>*/}
-            {/*                Сфера, у якій Ваша компанія може надати пропозиції до*/}
-            {/*                співпраці {item.category}*/}
-            {/*            </p>*/}
-            {/*            <p>Короткий опис Вашої діяльності {item.description}</p>*/}
-            {/*            <p>Ваші пропозиції до співпраці {item.proposal}</p>*/}
-            {/*            <p>Посилання на картинку - {item.img}</p>*/}
-            {/*            <br />*/}
-            {/*        </div>*/}
-            {/*    ))}*/}
+          <SelectPicker
+              data={catategories}
+              searchable={false}
+              labelKey="name"
+              placeholder="Вибрати категорію"
+              value={selectedOffersCategory}
+              onChange={setSelectedOffersCategory}
+          />
+          {/*//TODO make component here*/}
+          {offersList?.length > 0 &&
+              offersList.map((item) => (
+                  <div>
+                    {item.category}
+                    <p>Назва юридичної/фізичної особи - {item.name}</p>
+                    <p>ЄДРПОУ або ІПН - {item.code}</p>
+                    <p>Контактна особа - {item.contact_person}</p>
+                    <p>Контактний телефон -{item.phone}</p>
+                    <p>Короткий опис Вашої діяльності - {item.description}</p>
+                    <p>Ваші пропозиції до співпраці - {item.proposal}</p>
+                    <p>Посилання на картинку - {item.img}</p>
+                    <br />
+                  </div>
+              ))}
         </div>
         <div>
           <h3>Редагування неперевірених пропозицій</h3>
             <SelectPicker
-                data={categories}
+                data={catategories}
                 searchable={false}
                 labelKey="name"
-                placeholder="Вибрати"
-                value={selectedCategory}
-                onChange={setSelectedCategory}
+                placeholder="Вибрати категорію"
+                value={selectedProposalsCategory}
+                onChange={setSelectedProposalsCategory}
             />
             {/*//TODO make component here*/}
             {proposalsList?.length > 0 &&
                 proposalsList.map((item) => (
                     <div>
+                      {item.category}
                         <p>Назва юридичної/фізичної особи - {item.name}</p>
                         <p>ЄДРПОУ або ІПН - {item.code}</p>
-                        <p>Контактна особа * {item.contact_person}</p>
-                        <p>Контактний телефон {item.phone}</p>
-                        <p>
-                            Сфера, у якій Ваша компанія може надати пропозиції до
-                            співпраці {item.category}
-                        </p>
-                        <p>Короткий опис Вашої діяльності {item.description}</p>
-                        <p>Ваші пропозиції до співпраці {item.proposal}</p>
+                        <p>Контактна особа - {item.contact_person}</p>
+                        <p>Контактний телефон - {item.phone}</p>
+                        <p>Короткий опис Вашої діяльності - {item.description}</p>
+                        <p>Ваші пропозиції до співпраці - {item.proposal}</p>
                         <p>Посилання на картинку - {item.img}</p>
                         <br />
                     </div>
