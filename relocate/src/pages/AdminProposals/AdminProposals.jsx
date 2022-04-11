@@ -26,7 +26,6 @@ const AdminProposals = () => {
       () => getOffersByCategory(selectedOffersCategory, setOffersList),
       [selectedOffersCategory]
   );
-  console.log("proposalsList", proposalsList);
   return (
     <div className={styles.container}>
       <Navbar />

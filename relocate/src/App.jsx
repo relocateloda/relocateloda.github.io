@@ -29,14 +29,14 @@ const App = () => {
           <Route path={RoutesConst.SEND_OFFER} element={<SendOffer />} />
           <Route path={RoutesConst.CATEGORIES} element={<OffersCategories />} />
 
-          <Route path={RoutesConst.CONSULTING} element={<CategoryPage />} />
-          <Route path={RoutesConst.IT} element={<CategoryPage />} />
-          <Route path={RoutesConst.LOGISTICS} element={<CategoryPage />} />
+          <Route path={RoutesConst.CONSULTING} element={<CategoryPage category="consulting"/>} />
+          <Route path={RoutesConst.IT} element={<CategoryPage category="it"/>} />
+          <Route path={RoutesConst.LOGISTICS} element={<CategoryPage category="logistics"/>} />
           <Route
             path={RoutesConst.MANUFACTURING}
-            element={<CategoryPage />}
+            element={<CategoryPage category="manufacturing"/>}
           />
-          <Route path={RoutesConst.OTHER} element={<CategoryPage />} />
+          <Route path={RoutesConst.OTHER} element={<CategoryPage category="other"/>} />
           <Route path={RoutesConst.NOT_FOND} element={<NotFoundPage />} />
           <Route
               path="*"
