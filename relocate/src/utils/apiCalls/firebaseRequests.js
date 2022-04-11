@@ -20,3 +20,12 @@ export const login = (path, set, setError) => {
         : set(doc[0].isAdmin);
   })
 };
+
+export const getPoposalsByCategory= (category, setData) => {
+  const q = query(collection(db, `${category}_proposals`));
+  return onSnapshot(q, (snapshot) => {
+    setData(
+        snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+    );
+  })
+};

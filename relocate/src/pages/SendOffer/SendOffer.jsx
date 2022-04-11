@@ -76,7 +76,7 @@ const SendOffer = () => {
   };
 
   const handleSendNew = async () => {
-    const collectionRef = collection(db, `other_${formValue.category}`);
+    const collectionRef = collection(db, `${formValue.category}_proposals`);
     // const payload = {
     //   name: "234",
     //   phone: "234",
@@ -88,7 +88,7 @@ const SendOffer = () => {
     // };
     const docRef = await addDoc(collectionRef, formValue);
     docRef?.id && toaster.push(<Message type="success">Ваша пропозиція вдало надіслано</Message>);
-    docRef?.id && setTimeout(()=> navigate(RoutesConst.MAIN), 3000)
+    docRef?.id && setTimeout(()=> navigate(RoutesConst.MAIN), 1500)
   };
   return (
     <div className={style.container}>
@@ -118,6 +118,7 @@ const SendOffer = () => {
       />
         <TextField name="description" label="Короткий опис Вашої діяльності" placeholder="Короткий опис"/>
         <TextField name="proposal" label="Ваші пропозиції до співпраці" placeholder="Пропозиції"/>
+        <TextField name="img" label="Додайте посилання на логотип Вашої компанії (за наявності)" placeholder="Пропозиції"/>
       <Form.Group>
         <Button appearance="primary" onClick={handleSubmit}>
           Submit
