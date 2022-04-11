@@ -1,4 +1,4 @@
-import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query, doc, setDoc, deleteDoc } from "firebase/firestore";
 import { db } from "../../firebase-config";
 
 export const getCategories = (setData) => {
@@ -37,4 +37,24 @@ export const getOffersByCategory= (category, setData) => {
         snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
     );
   })
+};
+
+export const editExistingProposal = async (category, payload, id) => {
+  const docRef = doc(db, `${category}_proposals`, id);
+  await setDoc(docRef, payload)
+};
+
+export const editExistingOffer = async (category, payload, id) => {
+  const docRef = doc(db, `${category}_confirmed`, id);
+  await setDoc(docRef, payload)
+};
+
+export const deleteProposal = async (category, id) => {
+  const docRef = doc(db, `${category}_proposals`, id);
+  await deleteDoc(docRef)
+};
+
+export const deleteOffer = async (category, id) => {
+  const docRef = doc(db, `${category}_confirmed`, id);
+  await deleteDoc(docRef)
 };

@@ -77,15 +77,6 @@ const SendOffer = () => {
 
   const handleSendNew = async () => {
     const collectionRef = collection(db, `${formValue.category}_proposals`);
-    // const payload = {
-    //   name: "234",
-    //   phone: "234",
-    //   img: "23423",
-    //   contact_person: "234234",
-    //   code: "234",
-    //   description: "234",
-    //   proposal: "234234",
-    // };
     const docRef = await addDoc(collectionRef, formValue);
     docRef?.id && toaster.push(<Message type="success">Ваша пропозиція вдало надіслано</Message>);
     docRef?.id && setTimeout(()=> navigate(RoutesConst.MAIN), 1500)
