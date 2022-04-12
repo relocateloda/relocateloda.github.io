@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { RoutesConst } from "../../common/Routes";
 
 const { ArrayType, StringType, NumberType } = Schema.Types;
-const model = Schema.Model({
+export const model = Schema.Model({
   code: Schema.Types.StringType().isRequired("Обов'язково заповнити"),
   contact_person: Schema.Types.StringType().isRequired("Обов'язково заповнити"),
   description: Schema.Types.StringType().isRequired("Обов'язково заповнити"),
@@ -21,7 +21,7 @@ const model = Schema.Model({
   category: Schema.Types.StringType().isRequired("Обов'язково заповнити"),
 });
 
-const Field = forwardRef((props, ref) => {
+export const Field = forwardRef((props, ref) => {
   const { name, message, label, accepter, error, ...rest } = props;
   return (
     <Form.Group
@@ -40,7 +40,7 @@ const Field = forwardRef((props, ref) => {
     </Form.Group>
   );
 });
-const TextField = forwardRef((props, ref) => {
+export const TextField = forwardRef((props, ref) => {
   const { name, label, accepter, ...rest } = props;
   return (
     <Form.Group controlId={`${name}-4`} ref={ref}>

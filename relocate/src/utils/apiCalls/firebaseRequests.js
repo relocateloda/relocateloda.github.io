@@ -58,3 +58,7 @@ export const deleteOffer = async (category, id) => {
   const docRef = doc(db, `${category}_confirmed`, id);
   await deleteDoc(docRef)
 };
+export const deleteItem = async (category, type, id) => {
+  const docRef = doc(db, `${category}${type}`, id);
+  await deleteDoc(docRef)
+};

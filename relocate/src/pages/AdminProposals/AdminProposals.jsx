@@ -6,10 +6,11 @@ import {
   deleteOffer,
   deleteProposal, editExistingOffer, editExistingProposal,
   getCategories, getOffersByCategory,
-  getPoposalsByCategory,
+  getPoposalsByCategory, login,
 } from "../../utils/apiCalls/firebaseRequests";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase-config";
+import Editmodal from "../../Atom/modal/Editmodal";
 
 const AdminProposals = () => {
   const [catategories, setCategories] = useState([]);
@@ -21,6 +22,7 @@ const AdminProposals = () => {
   const [formValueProposal, setFormValueProposal] = useState(null);
   const [offersEditMode, setOffersEditMode] = useState(false);
   const [proposalsEditMode, setProposalsEditMode] = useState(false);
+  const [itemForEdit, setItemForEdit] = useState(false);
 
 
   useEffect(() => getCategories(setCategories), []);
@@ -33,7 +35,6 @@ const AdminProposals = () => {
       [selectedOffersCategory]
   );
   const approveProposal = async (category, item) => {
-    console.log(category, item);
     const collectionRef = collection(db, `${category}_confirmed`);
     const docRef = await addDoc(collectionRef, {
       code: item.code,
@@ -49,7 +50,6 @@ const AdminProposals = () => {
     docRef?.id && await deleteProposal(category, item.id);
     };
   const removeFromOffers = async (category, item) => {
-    console.log(category, item);
     const collectionRef = collection(db, `${category}_proposals`);
     const docRef = await addDoc(collectionRef, {
       code: item.code,
@@ -64,7 +64,6 @@ const AdminProposals = () => {
     docRef?.id && toaster.push(<Message type="success">Надіслано в непогоджені пропозиції</Message>);
     docRef?.id && await deleteOffer(category, item.id);
   };
-
   const editOffer = async (id) => {
     await editExistingOffer(selectedOffersCategory, {
       code: formValueOffer.code,
@@ -77,19 +76,19 @@ const AdminProposals = () => {
       category: formValueOffer.category,
     }, id);
   }
-
-  const editProposal = async (id) => {
-    await editExistingProposal(selectedOffersCategory, {
-      code: formValueOffer.code,
-      contact_person: formValueOffer.contact_person,
-      description: formValueOffer.description,
-      img: formValueOffer.img,
-      name: formValueOffer.name,
-      phone: formValueOffer.phone,
-      proposal: formValueOffer.proposal,
-      category: formValueOffer.category,
-    }, id);
-  }
+  //
+  // const editProposal = async (id) => {
+  //   await editExistingProposal(selectedOffersCategory, {
+  //     code: formValueOffer.code,
+  //     contact_person: formValueOffer.contact_person,
+  //     description: formValueOffer.description,
+  //     img: formValueOffer.img,
+  //     name: formValueOffer.name,
+  //     phone: formValueOffer.phone,
+  //     proposal: formValueOffer.proposal,
+  //     category: formValueOffer.category,
+  //   }, id);
+  // }
 
 
   return (
@@ -120,6 +119,10 @@ const AdminProposals = () => {
                       getOffersByCategory(selectedOffersCategory, setOffersList)
                     }}><b>DELETE</b></p>
                     <p onClick={()=>removeFromOffers(selectedOffersCategory, item)}><b>DISAPPROVE</b></p>
+                    <p onClick={()=>{
+                      setOffersEditMode(true)
+                      setItemForEdit(item)
+                    }}><b>Edit</b></p>
                     <p>Назва юридичної/фізичної особи - {item.name}</p>
                     <p>ЄДРПОУ або ІПН - {item.code}</p>
                     <p>Контактна особа - {item.contact_person}</p>
@@ -147,6 +150,10 @@ const AdminProposals = () => {
                     <div key={item.id}>
                       <p onClick={()=>deleteProposal(selectedProposalsCategory, item.id)}><b>delete</b></p>
                       <p onClick={()=>approveProposal(selectedProposalsCategory, item)}><b>APPROVE</b></p>
+                      <p onClick={()=>{
+                        setProposalsEditMode(true)
+                        setItemForEdit(item)
+                      }}><b>Edit</b></p>
                       {item.category}
                         <p>Назва юридичної/фізичної особи - {item.name}</p>
                         <p>ЄДРПОУ або ІПН - {item.code}</p>
@@ -160,6 +167,12 @@ const AdminProposals = () => {
                 ))}
         </div>
       </div>
+      {(proposalsEditMode || offersEditMode) && <Editmodal
+          itemType={proposalsEditMode ? "_proposals" : "_confirmed"}
+          editMode={proposalsEditMode ? proposalsEditMode : offersEditMode}
+          setEditMode={proposalsEditMode ? setProposalsEditMode : setOffersEditMode}
+          itemForEdit={itemForEdit}
+      />}
     </div>
   );
 };
