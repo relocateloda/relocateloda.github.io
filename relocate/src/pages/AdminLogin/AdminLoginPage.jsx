@@ -73,7 +73,7 @@ const AdminLoginPage = () => {
           onClick={handleChange}
         />
         <Button appearance="primary" onClick={handleSubmit}>
-          Submit
+          Підтвердити
         </Button>
       </Form>
           </div>
