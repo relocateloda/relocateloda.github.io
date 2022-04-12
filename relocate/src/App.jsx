@@ -20,27 +20,40 @@ const App = () => {
         <Routes>
           <Route path={RoutesConst.MAIN} element={<MainPage />} />
           <Route path={RoutesConst.ADMIN_LOGIN} element={<AdminLoginPage />} />
-          <Route element={<PrivateRoute />}>
+          {/* <Route element={<PrivateRoute />}> */}
             <Route
               path={RoutesConst.ADMIN_PROPOSALS}
               element={<AdminProposals />}
             />
-          </Route>
+          {/* </Route> */}
           <Route path={RoutesConst.SEND_OFFER} element={<SendOffer />} />
           <Route path={RoutesConst.CATEGORIES} element={<OffersCategories />} />
 
-          <Route path={RoutesConst.CONSULTING} element={<CategoryPage category="consulting"/>} />
-          <Route path={RoutesConst.IT} element={<CategoryPage category="it"/>} />
-          <Route path={RoutesConst.LOGISTICS} element={<CategoryPage category="logistics"/>} />
+
+          <Route
+            path={RoutesConst.CONSULTING}
+            element={<CategoryPage category="consulting" />}
+          />
+          <Route
+            path={RoutesConst.IT}
+            element={<CategoryPage category="it" />}
+          />
+          <Route
+            path={RoutesConst.LOGISTICS}
+            element={<CategoryPage category="logistics" />}
+          />
           <Route
             path={RoutesConst.MANUFACTURING}
-            element={<CategoryPage category="manufacturing"/>}
+            element={<CategoryPage category="manufacturing" />}
           />
-          <Route path={RoutesConst.OTHER} element={<CategoryPage category="other"/>} />
+          <Route
+            path={RoutesConst.OTHER}
+            element={<CategoryPage category="other" />}
+          />
           <Route path={RoutesConst.NOT_FOND} element={<NotFoundPage />} />
           <Route
-              path="*"
-              element={<Navigate to={RoutesConst.NOT_FOND} replace />}
+            path="*"
+            element={<Navigate to={RoutesConst.NOT_FOND} replace />}
           />
         </Routes>
       </BrowserRouter>

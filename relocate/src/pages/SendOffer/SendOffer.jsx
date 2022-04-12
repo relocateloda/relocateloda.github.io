@@ -90,6 +90,7 @@ const SendOffer = () => {
       onCheck={setFormError}
       formValue={formValue}
       model={model}
+      className={style.form}
     >
       <TextField name="name" label="Назва юридичної/фізичної особи" placeholder="Назва"/>
       <TextField name="code" label="ЄДРПОУ або ІПН" placeholder="ЄДРПОУ або ІПН"/>
