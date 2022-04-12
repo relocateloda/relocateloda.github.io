@@ -30,26 +30,46 @@ const CategoryPage = ({ category }) => {
   return (
     <div className={styles.container}>
       <Navbar />
+      <div className={styles.wrapperHeader}>
       <h1>Пропозиції у сфері</h1>
       <h3>{getCategoryNameByValue()}</h3>
+      </div>
+      <div className={styles.wrapper}>
       {offersList?.length > 0 ?
         offersList.map((item) => (
-          <div key={item.id}>
-            {item.category}
-            <p>Назва юридичної/фізичної особи - {item.name}</p>
-            <p>ЄДРПОУ або ІПН - {item.code}</p>
-            <p>Контактна особа - {item.contact_person}</p>
-            <p>Контактний телефон -{item.phone}</p>
-            <p>Короткий опис Вашої діяльності - {item.description}</p>
-            <p>Ваші пропозиції до співпраці - {item.proposal}</p>
-            <p>Посилання на картинку - {item.img}</p>
-            <br />
+         
+          <div className={styles.card} key={item.id}>
+            <h2 className={styles.titleCategori}>{item.category}</h2>
+            <ul className={styles.list}>
+                  <li className={styles.listItem}>
+                  <b>Назва юридичної/фізичної особи</b> - {item.name}
+                  </li>
+                  <li className={styles.listItem}>
+                  <b>ЄДРПОУ або ІПН</b> - {item.code}
+                  </li>
+                  <li className={styles.listItem}>
+                    <b>Контактна особа </b> - {item.contact_person}
+                  </li>
+                  <li className={styles.listItem}>
+                    <b>Контактний телефон</b> - {item.phone}
+                  </li>
+                  <li className={styles.listItem}>
+                    <b>Короткий опис Вашої діяльності</b> - {item.description}
+                  </li>
+                  <li className={styles.listItem}>
+                    <b>Ваші пропозиції до співпраці</b> - {item.proposal}
+                  </li>
+                  <li className={styles.listItem}>
+                    <b>Посилання на картинку</b> - {item.img}
+                  </li>
+                </ul>
           </div>
+       
         )) :
       <h4>
           Нажаль, жодного варіанту не доступно
       </h4>}
-
+      </div>
       <Footer />
     </div>
   );

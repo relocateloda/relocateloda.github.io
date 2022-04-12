@@ -81,7 +81,7 @@ const AdminProposals = () => {
       </h1>
       <div className={styles.flexBox}>
         <div>
-          <h3>Редагування погоджених пропозицій</h3>
+          <h3>Редагування погоджених<br />пропозицій</h3>
           <SelectPicker
             data={catategories}
             searchable={false}
@@ -162,7 +162,7 @@ const AdminProposals = () => {
             ))}
         </div>
         <div>
-          <h3>Редагування неперевірених пропозицій</h3>
+          <h3>Редагування неперевірених<br /> пропозицій</h3>
           <SelectPicker
             data={catategories}
             searchable={false}
