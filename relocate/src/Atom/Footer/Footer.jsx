@@ -11,7 +11,7 @@ const Footer = () => {
     const navigate = useNavigate();
     const handleClick = ()=> {
         const user = encryptStorageAdmin.getItem("au");
-        user === true && navigate(RoutesConst.ADMIN_PROPOSALS)
+        user === true ? navigate(RoutesConst.ADMIN_PROPOSALS) : navigate(RoutesConst.ADMIN_LOGIN)
     }
   return (
     <div className={styles.footer} onClick={handleClick}>

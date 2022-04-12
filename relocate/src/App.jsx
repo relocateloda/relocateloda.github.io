@@ -1,5 +1,5 @@
 import styles from "./App.module.scss";
-import { Route, Routes, Navigate, HashRouter } from "react-router-dom";
+import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
 import MainPage from "./pages/Main/Mainpage";
 import { RoutesConst } from "./common/Routes";
 import "rsuite/dist/rsuite.min.css";
@@ -14,7 +14,7 @@ import CategoryPage from "./pages/CategoryPage/CategoryPage";
 const App = () => {
   return (
     <div className={styles.app}>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route path={RoutesConst.MAIN} element={<MainPage />} />
           <Route path={RoutesConst.ADMIN_LOGIN} element={<AdminLoginPage />} />
@@ -53,7 +53,7 @@ const App = () => {
             element={<Navigate to={RoutesConst.NOT_FOND} replace />}
           />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 };
