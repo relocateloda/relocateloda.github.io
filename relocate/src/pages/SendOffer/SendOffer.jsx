@@ -112,7 +112,7 @@ const SendOffer = () => {
         <TextField name="proposal" label="Ваші пропозиції до співпраці" placeholder="Пропозиції"/>
         <TextField name="img" label="Додайте посилання на логотип Вашої компанії (за наявності)" placeholder="Пропозиції"/>
       <Form.Group>
-        <Button appearance="primary" onClick={handleSubmit}>
+        <Button style={{width: "100%", marginTop: "20px"}} appearance="primary" onClick={handleSubmit}>
           Надіслати
         </Button>
       </Form.Group>
