@@ -39,7 +39,7 @@ const CategoryPage = ({ category }) => {
         offersList.map((item) => (
          
           <div className={styles.card} key={item.id}>
-            <h2 className={styles.titleCategori}>{item.category}</h2>
+            {/*<h2 className={styles.titleCategori}>{item.category}</h2>*/}
             <ul className={styles.list}>
                   <li className={styles.listItem}>
                   <b>Назва юридичної/фізичної особи</b> - {item.name}
