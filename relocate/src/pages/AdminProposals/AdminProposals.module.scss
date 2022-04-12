@@ -1,5 +1,22 @@
-.container{
-  width: 100%;
+@import "../../variables.scss";
+
+.container {
+  padding: 10px 10px;
+  min-height: 100%;
+  background-image: linear-gradient(
+      rgba(38, 39, 38, 0.158),
+      rgba(35, 37, 39, 0.829)
+    ),
+    url("../../assets/lviv.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  
+
+
 }
 .headerText {
   text-align: center;
@@ -9,4 +26,59 @@
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
+
 }
+.card{
+  min-width: 320px;
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba( 255, 255, 255, 0.85 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 10px );
+-webkit-backdrop-filter: blur( 10px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 20px;
+  color: black;
+}
+
+.wrapperBtn{
+  display: flex;
+}
+
+.removeBtn{
+  padding: 5px;
+ width: 57px;
+ cursor: pointer;
+}
+.approveBtn{
+  width: 57px;
+  cursor: pointer;
+}
+.refreshBtn{
+  padding: 5px;
+  width: 57px;
+  cursor: pointer;
+}
+.disapproveBtn{
+  padding: 5px;
+ width: 57px;
+ cursor: pointer;
+}
+.category{
+  font-size: 23px;
+  text-transform: uppercase;
+}
+.categoryID{
+  font-size: 20px;
+}
+.list{
+  list-style: none;
+}
+.listItem{
+  font-size: 20px;
+}
+
+
+
+
