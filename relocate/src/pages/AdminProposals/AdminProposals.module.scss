@@ -14,71 +14,67 @@
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  
-
-
 }
 .headerText {
   text-align: center;
   margin-bottom: 20px;
 }
-.flexBox{
+.flexBox {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
-
 }
-.card{
+.card {
   min-width: 320px;
   margin-top: 10px;
   padding: 10px;
-  background: rgba( 255, 255, 255, 0.85 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 10px );
--webkit-backdrop-filter: blur( 10px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
   color: black;
 }
 
-.wrapperBtn{
+.wrapperBtn {
+  //position: absolute;
+  //right:10px;
   display: flex;
+  justify-content: flex-end;
 }
 
-.removeBtn{
-  padding: 5px;
- width: 57px;
- cursor: pointer;
-}
-.approveBtn{
-  width: 57px;
+.removeBtn {
+  padding: 0 5px;
+  width: 45px;
   cursor: pointer;
 }
-.refreshBtn{
-  padding: 5px;
-  width: 57px;
+.approveBtn {
+  padding: 0 5px;
+  width: 45px;
   cursor: pointer;
 }
-.disapproveBtn{
-  padding: 5px;
- width: 57px;
- cursor: pointer;
+.refreshBtn {
+  padding: 0 5px;
+  width: 45px;
+  cursor: pointer;
 }
-.category{
+.disapproveBtn {
+  padding: 0 5px;
+  width: 45px;
+  cursor: pointer;
+}
+.category {
   font-size: 23px;
   text-transform: uppercase;
 }
-.categoryID{
+.categoryID {
   font-size: 20px;
 }
-.list{
+.list {
   list-style: none;
 }
-.listItem{
-  font-size: 20px;
+.listItem {
+  font-size: 18px;
 }
-
-
-
-

@@ -1,7 +1,8 @@
 import styles from "./Cards.module.scss"
 
-import relocation from "../../assets/icon/location-pin.png";
-import currency from "../../assets/icon/currency.png";
+import relocation from "../../assets/icon/team.png";
+import currency from "../../assets/icon/business-proposal.png";
+// import currency from "../../assets/icon/currency.png";
 import arrow from "../../assets/icon/arrow.png"
 
 import { RoutesConst } from "../../common/Routes";
@@ -10,7 +11,7 @@ import { Link } from "react-router-dom";
 const Cards = () => {
     return (
         <div className={styles.wrapper}>
-        <Link to={RoutesConst.CATEGORIES}className={styles.cardOne}>
+        <Link to={RoutesConst.CATEGORIES} className={styles.cardOne}>
           <img className={styles.icon} src={relocation} alt="car" />
           <h2 className={styles.title}>Ви релокований бізнес?</h2>
           <div className={styles.subtitle}>

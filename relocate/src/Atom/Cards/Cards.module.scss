@@ -1,12 +1,14 @@
 @import "../../variables.scss";
 
 .wrapper {
+  width: 100%;
+  max-width: 600px;
   margin-top: 4%;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .cardOne {
@@ -15,11 +17,12 @@
   // height: 400px;
   // max-width: 202px;
   // height: 269px;
-  max-width: 130px;
+  max-width: 145px;
   height: 175px;
   cursor: pointer;
   // margin-right: 15px;
   padding: 5px;
+  margin: 0 !important;
 
   display: flex;
   flex-direction: column;
@@ -52,17 +55,18 @@
     padding: 10px;
   }
   @media only screen and (min-width: $md) {
-    max-width: 300px;
+    max-width: 290px;
     height: 400px;
     }
 }
 
 .cardSecond {
+  margin: 0 !important;
   text-decoration: none;
-  max-width: 130px;
+  max-width: 145px;
   height: 175px;
   cursor: pointer;
-  margin-left: 7px;
+  //margin-left: 7px;
   padding: 5px;
 
   display: flex;
@@ -99,15 +103,16 @@
     padding: 10px;
   }
   @media only screen and (min-width: $md) {
-  max-width: 300px;
+  max-width: 290px;
   height: 400px;
   }
 }
 
 .icon{
-  width: 50%;
-  @media only screen and (min-width: $md) {
-    width: 100%;
+  width: 70%;
+  margin: auto;
+  @media only screen and (max-width: $md) {
+    width: 50%;
     }
 }
 
@@ -129,9 +134,11 @@
 .title {
   color: $color-white;
   font-size: 15px;
-  line-height: 30px;
+  line-height: 20px;
+  margin-bottom: 10px;
   @media only screen and (min-width: $sm) {
     font-size: 20px;
+    line-height: 22px;
   }
 }
 

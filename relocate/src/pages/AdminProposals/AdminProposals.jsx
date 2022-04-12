@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 import {
   deleteOffer,
   deleteProposal,
-  editExistingOffer,
-  editExistingProposal,
+
   getCategories,
   getOffersByCategory,
   getPoposalsByCategory,
@@ -15,10 +14,9 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import Editmodal from "../../Atom/modal/Editmodal";
 import Footer from "../../Atom/Footer/Footer";
-import Icondelete from "../../assets/icon/trash.png";
-import IconApprove from "../../assets/icon/ok.svg";
+import Icondelete from "../../assets/icon/trash копіювати.png";
+import IconApprove from "../../assets/icon/icons8-ok-48.png";
 import IconDisapprove from "../../assets/icon/remove.png";
-import IconRefresh from "../../assets/icon/refresh.png";
 import IconPencil from "../../assets/icon/pencil.png";
 
 const AdminProposals = () => {
@@ -28,8 +26,6 @@ const AdminProposals = () => {
   const [proposalsList, setProposalsList] = useState(null);
   const [selectedOffersCategory, setSelectedOffersCategory] = useState(null);
   const [offersList, setOffersList] = useState(null);
-  const [formValueOffer, setFormValueOffer] = useState(null);
-  const [formValueProposal, setFormValueProposal] = useState(null);
   const [offersEditMode, setOffersEditMode] = useState(false);
   const [proposalsEditMode, setProposalsEditMode] = useState(false);
   const [itemForEdit, setItemForEdit] = useState(false);
@@ -77,36 +73,6 @@ const AdminProposals = () => {
       );
     docRef?.id && (await deleteOffer(category, item.id));
   };
-  const editOffer = async (id) => {
-    await editExistingOffer(
-      selectedOffersCategory,
-      {
-        code: formValueOffer.code,
-        contact_person: formValueOffer.contact_person,
-        description: formValueOffer.description,
-        img: formValueOffer.img,
-        name: formValueOffer.name,
-        phone: formValueOffer.phone,
-        proposal: formValueOffer.proposal,
-        category: formValueOffer.category,
-      },
-      id
-    );
-  };
-  //
-  // const editProposal = async (id) => {
-  //   await editExistingProposal(selectedOffersCategory, {
-  //     code: formValueOffer.code,
-  //     contact_person: formValueOffer.contact_person,
-  //     description: formValueOffer.description,
-  //     img: formValueOffer.img,
-  //     name: formValueOffer.name,
-  //     phone: formValueOffer.phone,
-  //     proposal: formValueOffer.proposal,
-  //     category: formValueOffer.category,
-  //   }, id);
-  // }
-
   return (
     <div className={styles.container}>
       <Navbar />
@@ -168,7 +134,7 @@ const AdminProposals = () => {
                     />
                   </div>
                 </div>
-                <h3 className={styles.category}>{item.category}</h3>
+                {/*<h3 className={styles.category}>{item.name}</h3>*/}
                 <ul className={styles.list}>
                   <li className={styles.listItem}>
                     <b>Назва юридичної/фізичної особи</b> - {item.name}
@@ -246,7 +212,7 @@ const AdminProposals = () => {
                     />
                   </div>
                 </div>
-                <h3 className={styles.category}>{item.category}</h3>
+                {/*<h3 className={styles.category}>{item.category}</h3>*/}
                 <ul className={styles.list}>
                   <li className={styles.listItem}>
                     <b>Назва юридичної/фізичної особи</b> - {item.name}

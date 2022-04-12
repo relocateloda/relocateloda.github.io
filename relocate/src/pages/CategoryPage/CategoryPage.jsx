@@ -26,7 +26,6 @@ const CategoryPage = ({ category }) => {
     getOffersByCategory(category, setOffersList);
     getCategories(setCategories);
   }, []);
-  useEffect(() => console.log("offersList", offersList), [offersList]);
 
   return (
     <div className={styles.container}>
