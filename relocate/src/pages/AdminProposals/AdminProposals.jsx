@@ -4,8 +4,11 @@ import { Message, SelectPicker, toaster } from "rsuite";
 import { useEffect, useState } from "react";
 import {
   deleteOffer,
-  deleteProposal, editExistingOffer, editExistingProposal,
-  getCategories, getOffersByCategory,
+  deleteProposal,
+  editExistingOffer,
+  editExistingProposal,
+  getCategories,
+  getOffersByCategory,
   getPoposalsByCategory,
 } from "../../utils/apiCalls/firebaseRequests";
 import { addDoc, collection } from "firebase/firestore";
@@ -75,17 +78,21 @@ const AdminProposals = () => {
     docRef?.id && (await deleteOffer(category, item.id));
   };
   const editOffer = async (id) => {
-    await editExistingOffer(selectedOffersCategory, {
-      code: formValueOffer.code,
-      contact_person: formValueOffer.contact_person,
-      description: formValueOffer.description,
-      img: formValueOffer.img,
-      name: formValueOffer.name,
-      phone: formValueOffer.phone,
-      proposal: formValueOffer.proposal,
-      category: formValueOffer.category,
-    }, id);
-  }
+    await editExistingOffer(
+      selectedOffersCategory,
+      {
+        code: formValueOffer.code,
+        contact_person: formValueOffer.contact_person,
+        description: formValueOffer.description,
+        img: formValueOffer.img,
+        name: formValueOffer.name,
+        phone: formValueOffer.phone,
+        proposal: formValueOffer.proposal,
+        category: formValueOffer.category,
+      },
+      id
+    );
+  };
   //
   // const editProposal = async (id) => {
   //   await editExistingProposal(selectedOffersCategory, {
@@ -99,7 +106,6 @@ const AdminProposals = () => {
   //     category: formValueOffer.category,
   //   }, id);
   // }
-
 
   return (
     <div className={styles.container}>
@@ -123,48 +129,46 @@ const AdminProposals = () => {
             offersList.map((item) => (
               <div key={item.id} className={styles.card}>
                 <div className={styles.wrapperBtn}>
-                <div
-                  onClick={() => {
-                    deleteOffer(selectedOffersCategory, item.id);
-                    getOffersByCategory(selectedOffersCategory, setOffersList);
-                  }}
-                >
-                  <p onClick={()=>{
-                    deleteOffer(selectedOffersCategory, item.id);
-                    getOffersByCategory(selectedOffersCategory, setOffersList)
-                  }}><b>DELETE</b></p>
-                  <p onClick={()=>removeFromOffers(selectedOffersCategory, item)}><b>DISAPPROVE</b></p>
-                  <p onClick={()=>{
-                    setOffersEditMode(true)
-                    setItemForEdit(item)
-                  }}><b>Edit</b></p>
-                  <img
-                    className={styles.removeBtn}
-                    src={Icondelete}
-                    alt="remove"
-                  />
-                </div>
-                <div
-                  onClick={() => removeFromOffers(selectedOffersCategory, item)}
-                >
+                  <div
+                    onClick={() => {
+                      deleteOffer(selectedOffersCategory, item.id);
+                      getOffersByCategory(
+                        selectedOffersCategory,
+                        setOffersList
+                      );
+                    }}
+                  >
+                    <img
+                      className={styles.removeBtn}
+                      src={Icondelete}
+                      alt="remove"
+                    />
+                  </div>
+                  <div
+                    onClick={() =>
+                      removeFromOffers(selectedOffersCategory, item)
+                    }
+                  >
                     <img
                       className={styles.disapproveBtn}
                       src={IconDisapprove}
                       alt="Disapprove"
                     />
-                </div>
-                <div
-                >
+                  </div>
+                  <div
+                    onClick={() => {
+                      setOffersEditMode(true);
+                      setItemForEdit(item);
+                    }}
+                  >
                     <img
                       className={styles.disapproveBtn}
                       src={IconPencil}
                       alt="refactoring"
                     />
-                </div>
+                  </div>
                 </div>
                 <h3 className={styles.category}>{item.category}</h3>
-                <h3 className={styles.categoryID}>ID - {item.id}</h3>
-
                 <ul className={styles.list}>
                   <li className={styles.listItem}>
                     <b>Назва юридичної/фізичної особи</b> - {item.name}
@@ -212,12 +216,6 @@ const AdminProposals = () => {
                       deleteProposal(selectedProposalsCategory, item.id)
                     }
                   >
-                    <p onClick={()=>deleteProposal(selectedProposalsCategory, item.id)}><b>delete</b></p>
-                    <p onClick={()=>approveProposal(selectedProposalsCategory, item)}><b>APPROVE</b></p>
-                    <p onClick={()=>{
-                      setProposalsEditMode(true)
-                      setItemForEdit(item)
-                    }}><b>Edit</b></p>
                     <img
                       className={styles.removeBtn}
                       src={Icondelete}
@@ -235,11 +233,16 @@ const AdminProposals = () => {
                       alt="Approve"
                     />
                   </div>
-                  <div>
+                  <div
+                    onClick={() => {
+                      setProposalsEditMode(true);
+                      setItemForEdit(item);
+                    }}
+                  >
                     <img
                       className={styles.refreshBtn}
-                      src={IconRefresh}
-                      alt="Approve"
+                      src={IconPencil}
+                      alt="edit"
                     />
                   </div>
                 </div>
@@ -272,12 +275,16 @@ const AdminProposals = () => {
         </div>
       </div>
       <Footer />
-      {(proposalsEditMode || offersEditMode) && <Editmodal
+      {(proposalsEditMode || offersEditMode) && (
+        <Editmodal
           itemType={proposalsEditMode ? "_proposals" : "_confirmed"}
           editMode={proposalsEditMode ? proposalsEditMode : offersEditMode}
-          setEditMode={proposalsEditMode ? setProposalsEditMode : setOffersEditMode}
+          setEditMode={
+            proposalsEditMode ? setProposalsEditMode : setOffersEditMode
+          }
           itemForEdit={itemForEdit}
-      />}
+        />
+      )}
     </div>
   );
 };

@@ -11,8 +11,6 @@ import PrivateRoute from "./utils/HOC/PrivateRoute";
 import AdminProposals from "./pages/AdminProposals/AdminProposals";
 import CategoryPage from "./pages/CategoryPage/CategoryPage";
 
-
-
 const App = () => {
   return (
     <div className={styles.app}>
@@ -20,15 +18,14 @@ const App = () => {
         <Routes>
           <Route path={RoutesConst.MAIN} element={<MainPage />} />
           <Route path={RoutesConst.ADMIN_LOGIN} element={<AdminLoginPage />} />
-          {/* <Route element={<PrivateRoute />}> */}
+          <Route element={<PrivateRoute />}>
             <Route
               path={RoutesConst.ADMIN_PROPOSALS}
               element={<AdminProposals />}
             />
-          {/* </Route> */}
+          </Route>
           <Route path={RoutesConst.SEND_OFFER} element={<SendOffer />} />
           <Route path={RoutesConst.CATEGORIES} element={<OffersCategories />} />
-
 
           <Route
             path={RoutesConst.CONSULTING}
