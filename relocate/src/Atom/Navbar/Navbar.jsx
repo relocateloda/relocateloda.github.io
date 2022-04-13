@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className={styles.navbar} onClick={() => navigate(RoutesConst.MAIN)}>
       <img className={styles.logo} src={logo} />
-      <p className={styles.title}>Львівська Обласна Державна Адміністрація</p>
+      {/* <p className={styles.title}>Львівська Обласна Державна Адміністрація</p> */}
     </div>
   );
 };
