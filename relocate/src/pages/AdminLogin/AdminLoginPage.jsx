@@ -60,10 +60,10 @@ const AdminLoginPage = () => {
         onChange={setFormValue}
         ref={formRef}
       >
-        <TextField name="name" label="Username" />
+        <TextField name="name" label="Ім'я користувача" />
         <TextField
           name="pass"
-          label="Password"
+          label="Пароль"
           type={visible ? "text" : "password"}
         />
         <img
