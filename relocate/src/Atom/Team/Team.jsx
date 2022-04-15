@@ -3,7 +3,7 @@ import styles from "./Team.module.scss";
 const Team = () => {
   return (
     <div className={styles.wrapper}>
-      <h2 className={styles.title}>Підтримка для бізнесу від</h2>
+      {/* <h2 className={styles.title}>Підтримка для бізнесу від</h2>
       <br/>
       <p className={styles.text}>
         <span className={styles.subtitle}>West Ukrainian Business Club</span> - вже 8-й рік об’єднує підприємців з різних
@@ -43,7 +43,7 @@ const Team = () => {
         суспільства, економіки та країни в цілому. Європейська Бізнес Асоціація
         разом з компаніями членами продовжує працювати та активно підтримувати
         країну в період жорстокої війни, яку розв’язала Росія проти України.
-      </p>
+      </p> */}
     </div>
   );
 };

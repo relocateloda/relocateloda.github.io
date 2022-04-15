@@ -18,7 +18,9 @@
   font-family: $sf-bold ;
 }
 .card:hover {
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 12px 4px rgba(0, 254, 149, 0.69);
+  transform: scale(1.01);
+  text-decoration: none;
   transform: scale(1.01);
   .link:after {
     width: 100%;
@@ -82,23 +84,38 @@
 /* CARD BACKGROUNDS */
 
 .card1 {
-  background: radial-gradient(#1fe4f5, #3fbafe);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
 .card2 {
-  background: radial-gradient(#fbc1cc, #fa99b2);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
 .card3 {
-  background: radial-gradient(#76b2fe, #b69efe);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
 .card4 {
-  background: radial-gradient(#60efbc, #58d5c9);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
 .card5 {
-  background: radial-gradient(#f588d8, #c0a3e5);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
 /* RESPONSIVE */

@@ -10,17 +10,75 @@
   width: 99%;
   margin-top: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
   cursor:default;
 }
 .title{
     text-align: center;
-    font-size: 15px;
+    font-size: 12px;
     text-transform: uppercase;
     font-family: $sf-bold;
     color: $color-white;
+    @media only screen and (min-width: $s) {
+      font-size: 13px;
+    }
     @media only screen and (min-width: $sm) {
-        font-size: 20px;
-      }
+      font-size: 12px;
+    }
+    @media only screen and (min-width: $md) {
+      width: 70%;
+      font-size: 20px;
+    }
+}
+.sectionNumber{
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+.contact{
+  color: $green-light;
+     font-size: 10px;
+     @media only screen and (min-width: $sm) {
+      font-size: 17px;
+    }
+}
+.icon{
+  width: 20px;
+  margin-right: 5px;
+}
+
+.number{
+  text-decoration: none;
+  color: $color-white;
+  font-size: 9px;
+  padding-left: 3px;
+  @media only screen and (min-width: $s) {
+    font-size: 11px;
+  }
+  @media only screen and (min-width: $sm) {
+    font-size: 17px;
+  }
+}
+.number:hover{
+  text-decoration: none;
+  color: $color-white;
+}
+.email{
+  text-decoration: none;
+  color: $color-white;
+  font-size: 15px;
+  padding-left: 5px;
+  @media only screen and (min-width: $s) {
+    font-size: 16px;
+  }
+  @media only screen and (min-width: $sm) {
+    font-size: 20px;
+  }
+}
+.email:hover{
+  text-decoration: none;
+  color: $color-white;
 }

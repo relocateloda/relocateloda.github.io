@@ -83,7 +83,7 @@ const SendOffer = () => {
   };
   return (
     <div className={style.container}>
-      <Navbar />
+    <Navbar />
     <Form
       ref={formRef}
       onChange={setFormValue}

@@ -2,44 +2,50 @@
 
 .container {
   padding: 10px 10px;
-  min-height: 100%;
-  background-image: linear-gradient(
-      rgba(38, 39, 38, 0.158),
-      rgba(35, 37, 39, 0.829)
-    ),
-    url("../../assets/lviv.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: white;
+
 }
 .headerText {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 30px;
   font-size: 24px;
     line-height: 41px;
 }
 .flexBox {
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;  
+}
+.title{
+  font-size: 17px;
+  text-align: center;
 }
 .card {
   min-width: 320px;
   margin-top: 10px;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
-  color: black;
+  color: white;
+  margin-bottom: 20px;
 }
 
+.selectPicer{
+  align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 .wrapperBtn {
   //position: absolute;
   //right:10px;
@@ -68,7 +74,7 @@
   cursor: pointer;
 }
 .category {
-  font-size: 23px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 .categoryID {
@@ -80,3 +86,11 @@
 .listItem {
   font-size: 18px;
 }
+:global{
+  .rs-anim-fade.rs-anim-in {
+    opacity: 1;
+    pointer-events: unset;
+    width: 0px !important;
+}
+}
+

@@ -1,18 +1,50 @@
 @import "../../variables.scss";
 
 
-.logo{
-    display: block;
-    max-width: 520px;
-    width: 100%;
+
+.logoLeft{
+  display: block;
+  max-width: 520px;
+  width: 80px;
+  @media only screen and (min-width: $s) {
+    width: 100px;
+  }
+  @media only screen and (min-width: $sm) {
+    width: 161px;
+  }
+}
+.logoCentral{
+  display: block;
+  max-width: 520px;
+  width: 45px;
+  @media only screen and (min-width: $s) {
+    width: 60px;
+  }
+  @media only screen and (min-width: $sm) {
+    width: 100px;
+  }
+  @media only screen and (min-width: $md) {
+    width: 150px;
+  }
+}
+.logoRight{
+  display: block;
+  max-width: 150px;
+  width: 80px;
+  @media only screen and (min-width: $s) {
+    width: 90px;
+  }
+  @media only screen and (min-width: $sm) {
+    width: 150px;
+  }
 }
 
 .navbar{
   cursor: pointer;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items:flex-start;
+  justify-content: space-between;
 }
 .title{
     text-align: center;

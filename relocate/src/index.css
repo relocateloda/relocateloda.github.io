@@ -3,8 +3,10 @@ html,
 #root {
   min-height: 100% !important;
   height: 100%;
-
+  background: linear-gradient(#141e30, #303b69);
 }
+
+
 
 /* Указываем box sizing */
 *,

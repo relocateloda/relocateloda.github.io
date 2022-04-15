@@ -9,9 +9,10 @@ const MainPage = () => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <Cards/>
+
       <AboutRelocation />
-      <Team />
+      <Cards />
+
       <Footer />
     </div>
   );

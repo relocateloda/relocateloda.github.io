@@ -3,5 +3,8 @@
   justify-content: center;
 }
 .modal{
-  background-color: gray !important;
+  background: rgba(0,0,0,.5) !important;
+  box-sizing: border-box;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
