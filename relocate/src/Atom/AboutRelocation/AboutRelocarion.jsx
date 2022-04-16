@@ -1,9 +1,16 @@
+import React from "react";
 import styles from "./AboutRelocation.module.scss";
 
 const AboutRelocation = () => {
+  const [toggle, setTooge] = React.useState();
   return (
     <div className={styles.wrapper}>
-      <h2 className={styles.title}>Програма релокації підприємств</h2>
+      <div className={styles.sectionProgram}>
+        <button className={styles.btnPrograming}>Програма релокації підприємства</button>
+        {toggle && <div className={styles.text}>asdasdasdasd</div>}
+        <button className={styles.btnHelp}>Допомога бізнесу</button>
+      </div>
+      {/* <h2 className={styles.title}>Програма релокації підприємств</h2>
       <br />
       <p className={styles.text}>
         Міністерство економіки України запустило програму з релокації
@@ -86,7 +93,7 @@ const AboutRelocation = () => {
         +38 (093) 4 499 108 (WhatsApp, Viber, Telegram);</b>
       </p>
       <br />
-      <p className={styles.text}>Електронна пошта: <b>investregionlviv@gmail.com</b></p>
+      <p className={styles.text}>Електронна пошта: <b>investregionlviv@gmail.com</b></p> */}
     </div>
   );
 };

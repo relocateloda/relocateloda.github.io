@@ -81,7 +81,7 @@ const AdminProposals = () => {
       </h1>
       <div className={styles.flexBox}>
         <div>
-          <h3>Редагування погоджених<br />пропозицій</h3>
+          <h3 className={styles.title}>Редагування погоджених пропозицій</h3>
           <SelectPicker
             data={catategories}
             searchable={false}
@@ -89,6 +89,7 @@ const AdminProposals = () => {
             placeholder="Вибрати категорію"
             value={selectedOffersCategory}
             onChange={setSelectedOffersCategory}
+            className={styles.selectPicer}
           />
           {/*//TODO make component here*/}
           {offersList?.length > 0 &&
@@ -162,7 +163,7 @@ const AdminProposals = () => {
             ))}
         </div>
         <div>
-          <h3>Редагування неперевірених<br /> пропозицій</h3>
+          <h3 className={styles.title}>Редагування неперевірених пропозицій</h3>
           <SelectPicker
             data={catategories}
             searchable={false}
@@ -170,7 +171,7 @@ const AdminProposals = () => {
             placeholder="Вибрати категорію"
             value={selectedProposalsCategory}
             onChange={setSelectedProposalsCategory}
-            className={styles.selectPicker}
+            className={styles.selectPicer}
           />
           {/*//TODO make component here*/}
           {proposalsList?.length > 0 &&
