@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4629923.css",
-    "main.js": "/static/js/main.6933fd93.js",
-    "static/media/lviv.jpg": "/static/media/lviv.caec35ee7690948f7a0c.jpg",
+    "main.css": "/static/css/main.9935da2b.css",
+    "main.js": "/static/js/main.48c9b3d0.js",
     "static/media/SFPRODISPLAYMEDIUM.woff": "/static/media/SFPRODISPLAYMEDIUM.101ed5219946cce959d6.woff",
     "static/media/SFPRODISPLAYBOLD.woff": "/static/media/SFPRODISPLAYBOLD.7f4a27565643e9e936a3.woff",
     "static/media/SFPRODISPLAYREGULAR.woff": "/static/media/SFPRODISPLAYREGULAR.d52afba30f6e0bf5bc5a.woff",
@@ -12,18 +11,19 @@
     "static/media/SFPRODISPLAYHEAVYITALIC.woff": "/static/media/SFPRODISPLAYHEAVYITALIC.2c773a511b126aeba57e.woff",
     "static/media/SFPRODISPLAYULTRALIGHTITALIC.woff": "/static/media/SFPRODISPLAYULTRALIGHTITALIC.68284f1f7f4cc58a1845.woff",
     "static/media/SFPRODISPLAYBLACKITALIC.woff": "/static/media/SFPRODISPLAYBLACKITALIC.0156863e194cfa277035.woff",
-    "static/media/logo.png": "/static/media/logo.ff88f8c9226bdf21a9f4.png",
-    "static/media/team.png": "/static/media/team.1116aab82b2faae6a417.png",
-    "static/media/business-proposal.png": "/static/media/business-proposal.28e5cb7b7c34ef413902.png",
+    "static/media/lvivRegion.png": "/static/media/lvivRegion.cc2d03162e740f596f44.png",
+    "static/media/region.png": "/static/media/region.b92b2732dbccc650cd26.png",
+    "static/media/logo.png": "/static/media/logo.9afd0afadc022bf166a0.png",
+    "static/media/email.png": "/static/media/email.a49e015815e3ac6d2bd3.png",
+    "static/media/call.png": "/static/media/call.70f32ad4514d9bdb6f91.png",
     "static/media/pencil.png": "/static/media/pencil.12eb7310d69f33efc2b9.png",
     "static/media/remove.png": "/static/media/remove.3c662b752278fc52f408.png",
-    "static/media/arrow.png": "/static/media/arrow.04bf38479561209d35f5.png",
     "index.html": "/index.html",
-    "main.c4629923.css.map": "/static/css/main.c4629923.css.map",
-    "main.6933fd93.js.map": "/static/js/main.6933fd93.js.map"
+    "main.9935da2b.css.map": "/static/css/main.9935da2b.css.map",
+    "main.48c9b3d0.js.map": "/static/js/main.48c9b3d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4629923.css",
-    "static/js/main.6933fd93.js"
+    "static/css/main.9935da2b.css",
+    "static/js/main.48c9b3d0.js"
   ]
 }
