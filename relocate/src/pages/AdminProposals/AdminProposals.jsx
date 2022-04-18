@@ -14,6 +14,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import Editmodal from "../../Atom/modal/Editmodal";
 import Footer from "../../Atom/Footer/Footer";
+import GetbackPage from "../../Atom/GetBackPage/getBackPage"
 import Icondelete from "../../assets/icon/trash копіювати.png";
 import IconApprove from "../../assets/icon/icons8-ok-48.png";
 import IconDisapprove from "../../assets/icon/remove.png";
@@ -76,6 +77,7 @@ const AdminProposals = () => {
   return (
     <div className={styles.container}>
       <Navbar />
+      <GetbackPage />
       <h1 className={styles.headerText}>
         Редагування погоджених та неперевірених пропозицій
       </h1>

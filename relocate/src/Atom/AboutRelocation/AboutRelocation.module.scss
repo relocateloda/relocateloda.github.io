@@ -28,7 +28,9 @@
   padding: 10px;
   font-size: 11px;
   background-color: $green-light;
+  font-family:$Geometria-Bold;
   color: $font-dark;
+  text-decoration: none !important;
 
   @media only screen and (min-width: $s) {
     width: 300px;
@@ -39,6 +41,9 @@
     width: 400px;
     font-size: 21px;
   }
+  &:hover{
+    color: $font-dark;
+  }
 }
 .btnHelp {
   margin-top: 20px;
@@ -46,8 +51,16 @@
   border-radius: 20px;
   padding: 10px;
   font-size: 11px;
+  font-family:$Geometria-Bold;
   background-color: $green-light;
   color: $font-dark;
+  text-decoration: none !important;
+  &:hover{
+    color: $font-dark;
+  }
+  &:focus{
+    color: $font-dark;
+  }
   @media only screen and (min-width: $s) {
     width: 250px;
     font-size: 15px;
@@ -57,18 +70,3 @@
     font-size: 21px;
   }
 }
-// .title {
-//         color: $color-black;
-//         font-size: 24px;
-//     line-height: 38px;
-// }
-
-// .text{
-//     font-size: 20px;
-//     text-align:start;
-//     color: $color-black;
-// }
-// .link{
-//     color:blue;
-//     text-decoration: none;
-// }

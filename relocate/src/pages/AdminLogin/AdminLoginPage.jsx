@@ -36,7 +36,7 @@ const AdminLoginPage = () => {
       navigate(RoutesConst.ADMIN_PROPOSALS)
     }
   }, [isAdmin]);
-  useEffect(() => console.log("isError", isError), [isError]);
+  // useEffect(() => console.log("isError", isError), [isError]);
   const [formValue, setFormValue] = useState({
     name: "",
     pass: "",

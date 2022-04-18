@@ -10,6 +10,8 @@ import OffersCategories from "./pages/OffersCategories/OffersCategories";
 import PrivateRoute from "./utils/HOC/PrivateRoute";
 import AdminProposals from "./pages/AdminProposals/AdminProposals";
 import CategoryPage from "./pages/CategoryPage/CategoryPage";
+import ProgramRelocation from "./pages/ProgramRelocation/ProgramRelocation"
+import BusinessAssistance from "./pages/BusinessAssistance/BusinessAssistance";
 
 const App = () => {
   return (
@@ -26,6 +28,8 @@ const App = () => {
           </Route>
           <Route path={RoutesConst.SEND_OFFER} element={<SendOffer />} />
           <Route path={RoutesConst.CATEGORIES} element={<OffersCategories />} />
+          <Route path={RoutesConst.PROGRAM_RELOCATION} element={<ProgramRelocation />} />
+          <Route path={RoutesConst.ASSIITANCE_BUSINESS} element={<BusinessAssistance />} />
 
           <Route
             path={RoutesConst.CONSULTING}

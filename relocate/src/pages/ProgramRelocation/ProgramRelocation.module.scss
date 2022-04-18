@@ -1,0 +1,41 @@
+@import "../../variables.scss";
+
+.container {
+    padding: 10px 10px;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.wrapper{
+    min-width:  320px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+
+.title {
+        color: $color-white;
+        font-size: 24px;
+    line-height: 38px;
+
+}
+
+.text{
+    font-size: 20px;
+    text-align:start;
+    color: $color-white;
+    line-height: 2;
+}
+.link{
+    color:$green-light;
+    text-decoration: none;
+    &:hover{
+        color:$green-light;  
+    }
+}
