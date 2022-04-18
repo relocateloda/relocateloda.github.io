@@ -1,6 +1,9 @@
+import style from "./NotFoundPage.module.scss"
+
+
 const NotFoundPage = () => {
     return (
-        <div>
+        <div className={style.container}>
             <h1>NotFoundPage</h1>
         </div>
     )

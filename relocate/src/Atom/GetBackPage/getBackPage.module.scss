@@ -1,0 +1,31 @@
+@import "../../variables.scss";
+
+.container{
+    width: 100%;
+
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    padding-top: 30px;
+    
+}
+
+.img{
+ width: 50px;
+ cursor: pointer;
+}
+
+.text{
+    font-family: $Geometria-Bold;
+    font-size: 17px;
+    color: azure;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+}

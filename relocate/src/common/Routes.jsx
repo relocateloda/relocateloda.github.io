@@ -4,6 +4,8 @@ export const RoutesConst = {
     CATEGORIES: "categories",
     ADMIN_LOGIN: "/admin",
     ADMIN_PROPOSALS: "/proposals",
+    PROGRAM_RELOCATION: "/program-relocation",
+    ASSIITANCE_BUSINESS: "/business-assistance",
     IT: "/it",
     MANUFACTURING: "/manufacturing",
     CONSULTING: "/consulting",

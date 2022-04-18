@@ -9,6 +9,7 @@ import Navbar from "../../Atom/Navbar/Navbar";
 import Footer from "../../Atom/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import { RoutesConst } from "../../common/Routes";
+import GeBackPage from "../../Atom/GetBackPage/getBackPage"
 
 const { ArrayType, StringType, NumberType } = Schema.Types;
 export const model = Schema.Model({
@@ -84,6 +85,7 @@ const SendOffer = () => {
   return (
     <div className={style.container}>
     <Navbar />
+    <GeBackPage />
     <Form
       ref={formRef}
       onChange={setFormValue}
