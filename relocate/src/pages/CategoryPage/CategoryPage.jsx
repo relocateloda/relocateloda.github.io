@@ -42,28 +42,41 @@ const CategoryPage = ({ category }) => {
           offersList.map((item) => (
             <div className={styles.card} key={item.id}>
               {/*<h2 className={styles.titleCategori}>{item.category}</h2>*/}
+                <div className={styles.flex}>
+                    {item.img !== "" ? <img className={styles.logo} src={item.img} alt="logo" /> : <div className={styles.logoLetters}>{item.name.substring(0,2).toUpperCase()}</div>}
+                    <div className={styles.nameBlock}>
+                        <p className={styles.title}>{item.name}</p>
+                        <span><b>ЄДРПОУ / ІПН</b>   {item.code}</span>
+                    </div>
+                </div>
               <ul className={styles.list}>
-                <li className={styles.listItem}>
-                  <b>Назва юридичної/фізичної особи</b> - {item.name}
-                </li>
-                <li className={styles.listItem}>
-                  <b>ЄДРПОУ або ІПН</b> - {item.code}
-                </li>
+                {/*<li className={styles.listItem}>*/}
+                {/*  <b>Назва юридичної/фізичної особи</b> - {item.name}*/}
+                {/*</li>*/}
+                {/*<li className={styles.listItem}>*/}
+                {/*  <b>ЄДРПОУ або ІПН</b> - {item.code}*/}
+                {/*</li>*/}
+                  <hr className={styles.hr}/>
+                  <li className={styles.listItem}>
+                      <b>Діяльність</b>:  {item.description}
+                  </li>
+                  <hr className={styles.hr}/>
+                  <li className={styles.listItem}>
+                      <p><b>Пропозиції до співпраці:</b></p>
+                      {item.proposal}
+                  </li>
+                  <hr className={styles.hr}/>
                 <li className={styles.listItem}>
                   <b>Контактна особа </b> - {item.contact_person}
                 </li>
                 <li className={styles.listItem}>
                   <b>Контактний телефон</b> - {item.phone}
                 </li>
-                <li className={styles.listItem}>
-                  <b>Короткий опис Вашої діяльності</b> - {item.description}
-                </li>
-                <li className={styles.listItem}>
-                  <b>Ваші пропозиції до співпраці</b> - {item.proposal}
-                </li>
-                <li className={styles.listItem}>
-                  <b>Посилання на картинку</b> - {item.img}
-                </li>
+
+
+                {/*<li className={styles.listItem}>*/}
+                {/*  <b>Посилання на картинку</b> - {item.img}*/}
+                {/*</li>*/}
               </ul>
             </div>
           ))
