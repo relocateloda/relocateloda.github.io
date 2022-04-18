@@ -16,8 +16,8 @@ const Footer = () => {
       : navigate(RoutesConst.ADMIN_LOGIN);
   };
   return (
-    <div className={styles.footer} onClick={handleClick}>
-      <p className={styles.title}>
+    <div className={styles.footer} >
+      <p className={styles.title} onClick={handleClick}>
         Якщо Вам потрібна допомога щодо релокації бізнесу на терени Львівщини
         звертайтесь до спеціалістів відділу інвестиційної політики Департаменту
         економічної політики ЛОДА
@@ -39,7 +39,7 @@ const Footer = () => {
         {" "}
         <img className={styles.icon} src={email} alt="phone" />
         <b className={styles.contact}>Електронна пошта:</b>{" "}
-        <a className={styles.email} href="investregionlviv@gmail.com">
+        <a className={styles.email} href="mailto:investregionlviv@gmail.com">
           {" "}
           investregionlviv@gmail.com
         </a>
