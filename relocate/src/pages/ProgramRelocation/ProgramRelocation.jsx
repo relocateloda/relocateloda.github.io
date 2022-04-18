@@ -64,6 +64,10 @@ const ProgramRelocation = () => {
           </a>
         </p>
         <br />
+      </div>
+      <br/>
+      <br/>
+      <div className={styles.wrapper}>
         <h2 className={styles.title}>
           Допомога у релокації відділу інвестиційної політики Департаменту
           економічної політики Львівської ОДА

@@ -23,6 +23,7 @@
     color: $color-white;
     font-size: 24px;
     line-height: 38px;
+    font-weight: bold;
 }
 
 .text {
@@ -38,4 +39,9 @@
     &:hover {
         color:$green-light;
     }
+}
+
+.subtitle{
+    font-weight: bold;
+    text-decoration: underline;
 }
