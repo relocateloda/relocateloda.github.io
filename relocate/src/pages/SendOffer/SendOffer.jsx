@@ -104,7 +104,7 @@ const SendOffer = () => {
         label="Сфера, у якій Ваша компанія може надати пропозиції до співпраці"
         accepter={SelectPicker}
         error={formError.category}
-        style={{ display: "inline-block", width: 200 }}
+        style={{ display: "inline-block", width: 300 }}
         data={categories}
         searchable={false}
         labelKey="name"
