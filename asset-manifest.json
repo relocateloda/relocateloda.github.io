@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9e1ce9d6.css",
-    "main.js": "/static/js/main.06dbe854.js",
+    "main.css": "/static/css/main.34e8e193.css",
+    "main.js": "/static/js/main.67361302.js",
     "static/media/CenturyGothic.woff": "/static/media/CenturyGothic.303d810fafd3f42ab796.woff",
     "static/media/CenturyGothic-Bold.woff": "/static/media/CenturyGothic-Bold.64e68eba0e0ce50ec5eb.woff",
     "static/media/lvivRegion.png": "/static/media/lvivRegion.cc2d03162e740f596f44.png",
@@ -14,11 +14,11 @@
     "static/media/pencil.png": "/static/media/pencil.12eb7310d69f33efc2b9.png",
     "static/media/remove.png": "/static/media/remove.3c662b752278fc52f408.png",
     "index.html": "/index.html",
-    "main.9e1ce9d6.css.map": "/static/css/main.9e1ce9d6.css.map",
-    "main.06dbe854.js.map": "/static/js/main.06dbe854.js.map"
+    "main.34e8e193.css.map": "/static/css/main.34e8e193.css.map",
+    "main.67361302.js.map": "/static/js/main.67361302.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e1ce9d6.css",
-    "static/js/main.06dbe854.js"
+    "static/css/main.34e8e193.css",
+    "static/js/main.67361302.js"
   ]
 }
